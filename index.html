@@ -2,22 +2,27 @@
 <title>Steno</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="css/w3.css">
-<link rel="stylesheet" href="css/extras.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="steno.css">
 <body>
 
-  <section class="fullscreen">
+  <section class="top-row">
+    <strong>Welcome to Steno</strong>
   <button id="start" onclick="start()">
-   <i class="fas fa-chevron-left"></i>
-  </button>
-  <button id="take notes" onclick="logNotes()">
-    <i class="fas fa-chevron-left"></i>
+   Video Start
   </button>
   <button id="stop" onclick="stop()">
-    <i class="fas fa-chevron-left"></i>
+    Video End
   </button>
-
-
   </section>
+  <section class="main-body">
+  <form class="text-entry" >
+      <label for="notes"> Note </label><br>
+      <input type="text" id="note-box" placeholder="Notes go here"><br>
+      <button type="button" onclick="logNotes()"> Submit </button>
+      <script type="text/javascript" src="functions.js"></script>
+    </form>
+    </section>
+  <section class="note-log">
+    <ul id="log-list">
+      </ul>
+    </section>
