@@ -8,9 +8,6 @@
 
   <section class="top-row">
     <strong>Welcome to Steno</strong>
-  <button id="start" onclick="start()">
-   Video Start
-  </button>
   <button id="stop" onclick="stop()">
     Video End
   </button>
@@ -19,12 +16,12 @@
   </button>
   </section>
   <section class="main-body">
-  <form class="text-entry" >
-      <label for="notes"> Note </label><br>
-      <input type="text" id="note-box" placeholder="Notes go here"><br>
-      <button type="button" onclick="logNotes()"> Submit </button>
-      <script type="text/javascript" src="functions.js"></script>
-    </form>
+    <label for="notes"> Note </label><br>
+    <input type="text" id="note-box" placeholder="Notes go here"><br>
+    <div id="buttons">
+      <button type="button" id="start-button" onclick="logNotes()"> Start note </button>
+      </div>
+    <script type="text/javascript" src="functions.js"></script>
     </section>
   <section class="note-log">
     <ul id="log-list">
