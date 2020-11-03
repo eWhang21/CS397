@@ -4,10 +4,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="steno.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="functions.js"></script>
+</section>
 <body>
 
   <section class="top-row">
-    <strong>Welcome to Steno</strong>
+    <h1>Welcome to Steno</h1>
+    <br>
   <button id="stop" onclick="stop()">
     Video End
   </button>
@@ -15,15 +22,34 @@
     Configure Path
   </button>
   </section>
+
+
   <section class="main-body">
-    <label for="notes"> Note </label><br>
-    <input type="text" id="note-box" placeholder="Notes go here"><br>
+    <div>
+      <br>
+      <textarea type="text" id="title_input" placeholder="Title" cols="90" rows="1"></textarea>
+      <div id="enter_buttons">
+        <button type="button" id="entertitle" onclick="enterTitle()"> Enter </button>
+        </div>
+
+    </div>
+    <div>
+      <br>
+        <textarea type="text" id="note-box" placeholder="Notes go here" cols="90" rows="6"></textarea>
+    </div>  
     <div id="buttons">
-      <button type="button" id="start-button" onclick="logNotes()"> Start note </button>
+      <button type="button" id="start-button" onclick="startNotes()"> Start note </button>
       </div>
-    <script type="text/javascript" src="functions.js"></script>
     </section>
-  <section class="note-log">
-    <ul id="log-list">
-      </ul>
-    </section>
+
+
+
+  <div class="container-fluid">
+    <h1 id="Title"></h1>
+    <div class="container-fluid">
+      <div class="row">
+        <ul id="timestamps" style='white-space:pre' class="col-lg-12 bg-success">
+          <br>"Beginning of Video Here"</br>
+        </ul>
+    </div>
+  </div>
